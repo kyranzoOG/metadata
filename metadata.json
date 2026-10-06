@@ -1,0 +1,6 @@
+{
+  "name": "MultiCraft Item Metadata Generator",
+  "description": "A fast, modernized metadata editor for MultiCraft. Originally created by multi_nono, modified by dark, and rewritten in TSX by kyranzo for superior performance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

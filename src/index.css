@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@600;700&family=Dancing+Script:wght@700&family=Montserrat:wght@200;300;800;900&family=Playfair+Display:ital,wght@1,700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'MultiCraft';
+  src: url('/assets/fonts/MultiCraftFont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-multicraft {
+  font-family: 'MultiCraft', monospace, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-chalkboard {
+  font-family: 'Architects Daughter', 'Caveat', cursive, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.font-skinny {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.06em;
+}
+
+.font-italic-serif {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.font-heavy-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+@layer base {
+  :root {
+    --pistachio-50: #f4faee;
+    --pistachio-100: #e5f5da;
+    --pistachio-200: #ceecb6;
+    --pistachio-300: #b0df8a;
+    --pistachio-400: #93ce5f;
+    --pistachio-500: #7ab343;
+    --pistachio-accent: #bef264;
+    --pistachio-neon: #a3e635;
+    --bg-black: #050705;
+    --surface-dark: #0c100c;
+    --surface-card: #121812;
+    --surface-border: #1f2c1f;
+  }
+
+  body {
+    background-color: #050705;
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  /* Custom Pistachio Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050705;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1f2c1f;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #364d36;
+  }
+}
