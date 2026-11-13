@@ -6,7 +6,7 @@ import { ArrowLeft, Sparkles, Award, Heart, Terminal, ExternalLink } from 'lucid
 
 export const Credits: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#050705] text-white flex flex-col font-sans selection:bg-[#bef264]/30 selection:text-[#bef264]">
+    <div className="min-h-screen bg-transparent relative z-10 text-white flex flex-col font-sans selection:bg-[#bef264]/30 selection:text-[#bef264]">
       {/* Universal Top Navigation Bar */}
       <Header />
 
@@ -27,7 +27,7 @@ export const Credits: React.FC = () => {
         </div>
 
         {/* Hero Card */}
-        <section className="bg-[#080d08] border border-[#1b2b1b] rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+        <section className="bg-[#080d08]/68 border border-[#bef264]/15 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden backdrop-blur-md">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#bef264]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="flex items-center gap-3.5 mb-6">
@@ -49,7 +49,7 @@ export const Credits: React.FC = () => {
           </div>
 
           {/* Primary Statement */}
-          <div className="p-5 sm:p-6 rounded-xl bg-[#030603] border border-[#172517] space-y-4 leading-relaxed text-sm sm:text-base text-gray-200 shadow-inner">
+          <div className="p-5 sm:p-6 rounded-xl bg-[#030603]/70 border border-[#172517] space-y-4 leading-relaxed text-sm sm:text-base text-gray-200 shadow-inner">
             <p>
               MultiCraft Metadata Editor was originally created by{' '}
               <SpecialText font="multicraft" className="text-base sm:text-lg">
@@ -71,7 +71,7 @@ export const Credits: React.FC = () => {
         </section>
 
         {/* Typography & Font Showcase */}
-        <section className="bg-[#080d08] border border-[#1b2b1b] rounded-2xl p-6 sm:p-8 shadow-xl space-y-4">
+        <section className="bg-[#080d08]/68 border border-[#bef264]/15 rounded-2xl p-6 sm:p-8 shadow-xl space-y-4 backdrop-blur-md">
           <div className="flex items-center gap-2 mb-2">
             <Terminal className="w-4 h-4 text-[#bef264]" />
             <h2 className="text-sm sm:text-base font-bold text-white tracking-tight">
@@ -83,62 +83,62 @@ export const Credits: React.FC = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-            <div className="p-3.5 rounded-xl bg-[#030603] border border-[#182618] flex items-center justify-between">
+            <div className="p-3.5 rounded-xl bg-[#030603]/65 border border-[#182618] flex items-center justify-between">
               <div>
                 <span className="text-[11px] text-[#8fa88f] block mb-0.5">MultiCraft Official Font</span>
                 <SpecialText font="multicraft" className="text-sm sm:text-base">
                   MultiCraft Pixel
                 </SpecialText>
               </div>
-              <span className="text-[10px] font-mono text-[#8fa88f] bg-[#0c120c] px-2 py-1 rounded border border-[#1b2b1b]">
+              <span className="text-[10px] font-mono text-[#8fa88f] bg-[#0c120c]/80 px-2 py-1 rounded border border-[#1b2b1b]">
                 In-game Pixel
               </span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-[#030603] border border-[#182618] flex items-center justify-between">
+            <div className="p-3.5 rounded-xl bg-[#030603]/65 border border-[#182618] flex items-center justify-between">
               <div>
                 <span className="text-[11px] text-[#8fa88f] block mb-0.5">Chalkboard Handwritten</span>
                 <SpecialText font="chalkboard" className="text-base sm:text-lg">
                   Chalkboard Script
                 </SpecialText>
               </div>
-              <span className="text-[10px] font-mono text-[#8fa88f] bg-[#0c120c] px-2 py-1 rounded border border-[#1b2b1b]">
+              <span className="text-[10px] font-mono text-[#8fa88f] bg-[#0c120c]/80 px-2 py-1 rounded border border-[#1b2b1b]">
                 Architects Daughter
               </span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-[#030603] border border-[#182618] flex items-center justify-between">
+            <div className="p-3.5 rounded-xl bg-[#030603]/65 border border-[#182618] flex items-center justify-between">
               <div>
                 <span className="text-[11px] text-[#8fa88f] block mb-0.5">Bold Impact Display</span>
                 <SpecialText font="bold" className="text-sm sm:text-base">
                   Heavy Bold Montserrat
                 </SpecialText>
               </div>
-              <span className="text-[10px] font-mono text-[#8fa88f] bg-[#0c120c] px-2 py-1 rounded border border-[#1b2b1b]">
+              <span className="text-[10px] font-mono text-[#8fa88f] bg-[#0c120c]/80 px-2 py-1 rounded border border-[#1b2b1b]">
                 900 Weight
               </span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-[#030603] border border-[#182618] flex items-center justify-between">
+            <div className="p-3.5 rounded-xl bg-[#030603]/65 border border-[#182618] flex items-center justify-between">
               <div>
                 <span className="text-[11px] text-[#8fa88f] block mb-0.5">Italic Editorial Serif</span>
                 <SpecialText font="italic" className="text-base sm:text-lg">
                   Playfair Display Italic
                 </SpecialText>
               </div>
-              <span className="text-[10px] font-mono text-[#8fa88f] bg-[#0c120c] px-2 py-1 rounded border border-[#1b2b1b]">
+              <span className="text-[10px] font-mono text-[#8fa88f] bg-[#0c120c]/80 px-2 py-1 rounded border border-[#1b2b1b]">
                 Serif Italic
               </span>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-[#030603] border border-[#182618] flex items-center justify-between sm:col-span-2">
+            <div className="p-3.5 rounded-xl bg-[#030603]/65 border border-[#182618] flex items-center justify-between sm:col-span-2">
               <div>
                 <span className="text-[11px] text-[#8fa88f] block mb-0.5">Skinny Minimal Thin</span>
                 <SpecialText font="skinny" className="text-sm sm:text-base">
                   Skinny Clean Montserrat Thin
                 </SpecialText>
               </div>
-              <span className="text-[10px] font-mono text-[#8fa88f] bg-[#0c120c] px-2 py-1 rounded border border-[#1b2b1b]">
+              <span className="text-[10px] font-mono text-[#8fa88f] bg-[#0c120c]/80 px-2 py-1 rounded border border-[#1b2b1b]">
                 200 Light
               </span>
             </div>

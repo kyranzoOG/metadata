@@ -33,17 +33,17 @@ export interface ToolCapabilities {
 export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
   "axe": [
     {
-      "name": "木の斧",
-      "key": "木の斧",
+      "name": "Wooden Axe",
+      "key": "Wooden Axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "2.5"
@@ -75,17 +75,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Wooden Axe"
     },
     {
-      "name": "石の斧",
-      "key": "石の斧",
+      "name": "Stone Axe",
+      "key": "Stone Axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "4"
@@ -117,17 +117,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Stone Axe"
     },
     {
-      "name": "銅の斧",
-      "key": "銅の斧",
+      "name": "Copper Axe",
+      "key": "Copper Axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "3.5"
@@ -159,17 +159,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Copper Axe"
     },
     {
-      "name": "鉄の斧",
-      "key": "鉄の斧",
+      "name": "Steel Axe",
+      "key": "Steel Axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "3.25"
@@ -201,17 +201,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Steel Axe"
     },
     {
-      "name": "金の斧",
-      "key": "金の斧",
+      "name": "Gold Axe",
+      "key": "Gold Axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "3.0"
@@ -243,17 +243,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Gold Axe"
     },
     {
-      "name": "ルビーの斧",
-      "key": "ルビーの斧",
+      "name": "Ruby Axe",
+      "key": "Ruby Axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "2.9"
@@ -285,17 +285,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Ruby Axe"
     },
     {
-      "name": "ダイヤモンドの斧",
-      "key": "ダイヤモンドの斧",
+      "name": "Diamond Axe",
+      "key": "Diamond Axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "2.5"
@@ -327,17 +327,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Diamond Axe"
     },
     {
-      "name": "エメラルドの斧",
-      "key": "エメラルドの斧",
+      "name": "Emerald Axe",
+      "key": "Emerald Axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "2.5"
@@ -369,17 +369,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Emerald Axe"
     },
     {
-      "name": "チャロイトの斧",
-      "key": "チャロイトの斧",
+      "name": "Charoite Axe",
+      "key": "Charoite Axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "2.5"
@@ -415,13 +415,13 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "key": "dragonhide axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "1.2"
@@ -457,13 +457,13 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "key": "fire/ice_draconic_steel axe",
       "groupBadges": [
         {
-          "key": "伐採",
-          "text": "伐採",
+          "key": "Choppy",
+          "text": "Choppy",
           "displayName": "Choppy"
         }
       ],
       "groupRaw": [
-        "伐採"
+        "Choppy"
       ],
       "t1": [
         "0.6"
@@ -497,17 +497,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
   ],
   "pick": [
     {
-      "name": "木のつるはし",
-      "key": "木のつるはし",
+      "name": "Wooden Pickaxe",
+      "key": "Wooden Pickaxe",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         }
       ],
       "groupRaw": [
-        "砕き"
+        "Cracky"
       ],
       "t1": [
         "2.5"
@@ -539,17 +539,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Wooden Pickaxe"
     },
     {
-      "name": "石のつるはし",
-      "key": "石のつるはし",
+      "name": "Stone Pickaxe",
+      "key": "Stone Pickaxe",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         }
       ],
       "groupRaw": [
-        "砕き"
+        "Cracky"
       ],
       "t1": [
         "2.5"
@@ -581,17 +581,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Stone Pickaxe"
     },
     {
-      "name": "銅のつるはし",
-      "key": "銅のつるはし",
+      "name": "Copper Pickaxe",
+      "key": "Copper Pickaxe",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         }
       ],
       "groupRaw": [
-        "砕き"
+        "Cracky"
       ],
       "t1": [
         "4.5"
@@ -623,17 +623,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Copper Pickaxe"
     },
     {
-      "name": "鉄のつるはし",
-      "key": "鉄のつるはし",
+      "name": "Steel Pickaxe",
+      "key": "Steel Pickaxe",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         }
       ],
       "groupRaw": [
-        "砕き"
+        "Cracky"
       ],
       "t1": [
         "4.0"
@@ -665,17 +665,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Steel Pickaxe"
     },
     {
-      "name": "金のつるはし",
-      "key": "金のつるはし",
+      "name": "Gold Pickaxe",
+      "key": "Gold Pickaxe",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         }
       ],
       "groupRaw": [
-        "砕き"
+        "Cracky"
       ],
       "t1": [
         "2.4"
@@ -707,17 +707,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Gold Pickaxe"
     },
     {
-      "name": "ルビーのつるはし",
-      "key": "ルビーのつるはし",
+      "name": "Ruby Pickaxe",
+      "key": "Ruby Pickaxe",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         }
       ],
       "groupRaw": [
-        "砕き"
+        "Cracky"
       ],
       "t1": [
         "2.3"
@@ -749,17 +749,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Ruby Pickaxe"
     },
     {
-      "name": "ダイヤモンドのつるはし",
-      "key": "ダイヤモンドのつるはし",
+      "name": "Diamond Pickaxe",
+      "key": "Diamond Pickaxe",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         }
       ],
       "groupRaw": [
-        "砕き"
+        "Cracky"
       ],
       "t1": [
         "2"
@@ -791,17 +791,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Diamond Pickaxe"
     },
     {
-      "name": "エメラルドのつるはし",
-      "key": "エメラルドのつるはし",
+      "name": "Emerald Pickaxe",
+      "key": "Emerald Pickaxe",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         }
       ],
       "groupRaw": [
-        "砕き"
+        "Cracky"
       ],
       "t1": [
         "2"
@@ -833,17 +833,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Emerald Pickaxe"
     },
     {
-      "name": "チャロイトのつるはし",
-      "key": "チャロイトのつるはし",
+      "name": "Charoite Pickaxe",
+      "key": "Charoite Pickaxe",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         }
       ],
       "groupRaw": [
-        "砕き"
+        "Cracky"
       ],
       "t1": [
         "2"
@@ -879,13 +879,13 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "key": "dragonhide pick",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         }
       ],
       "groupRaw": [
-        "砕き"
+        "Cracky"
       ],
       "t1": [
         "1.2"
@@ -921,19 +921,19 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "key": "fire/ice_draconic_steel pick",
       "groupBadges": [
         {
-          "key": "砕き",
-          "text": "砕き",
-          "displayName": "砕き"
+          "key": "Cracky",
+          "text": "Cracky",
+          "displayName": "Cracky"
         },
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "砕き",
-        "整地"
+        "Cracky",
+        "Crumbly"
       ],
       "t1": [
         "0.6",
@@ -970,17 +970,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
   ],
   "shovel": [
     {
-      "name": "木のシャベル",
-      "key": "木のシャベル",
+      "name": "Wooden Shovel",
+      "key": "Wooden Shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "3.0"
@@ -1012,17 +1012,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Wooden Shovel"
     },
     {
-      "name": "石のシャベル",
-      "key": "石のシャベル",
+      "name": "Stone Shovel",
+      "key": "Stone Shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "2.0"
@@ -1054,17 +1054,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Stone Shovel"
     },
     {
-      "name": "銅のシャベル",
-      "key": "銅のシャベル",
+      "name": "Copper Shovel",
+      "key": "Copper Shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "1.9"
@@ -1096,17 +1096,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Copper Shovel"
     },
     {
-      "name": "鉄のシャベル",
-      "key": "鉄のシャベル",
+      "name": "Steel Shovel",
+      "key": "Steel Shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "1.8"
@@ -1138,17 +1138,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Steel Shovel"
     },
     {
-      "name": "金のシャベル",
-      "key": "金のシャベル",
+      "name": "Gold Shovel",
+      "key": "Gold Shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "1.5"
@@ -1180,17 +1180,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Gold Shovel"
     },
     {
-      "name": "ルビーのシャベル",
-      "key": "ルビーのシャベル",
+      "name": "Ruby Shovel",
+      "key": "Ruby Shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "1.4"
@@ -1222,17 +1222,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Ruby Shovel"
     },
     {
-      "name": "ダイヤモンドのシャベル",
-      "key": "ダイヤモンドのシャベル",
+      "name": "Diamond Shovel",
+      "key": "Diamond Shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "1.3"
@@ -1264,17 +1264,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Diamond Shovel"
     },
     {
-      "name": "エメラルドのシャベル",
-      "key": "エメラルドのシャベル",
+      "name": "Emerald Shovel",
+      "key": "Emerald Shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "1.3"
@@ -1306,17 +1306,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Emerald Shovel"
     },
     {
-      "name": "チャロイトのシャベル",
-      "key": "チャロイトのシャベル",
+      "name": "Charoite Shovel",
+      "key": "Charoite Shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "1.3"
@@ -1352,13 +1352,13 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "key": "dragonhide shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "0.8"
@@ -1394,13 +1394,13 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "key": "fire/ice_draconic_steel shovel",
       "groupBadges": [
         {
-          "key": "整地",
-          "text": "整地",
-          "displayName": "整地"
+          "key": "Crumbly",
+          "text": "Crumbly",
+          "displayName": "Crumbly"
         }
       ],
       "groupRaw": [
-        "整地"
+        "Crumbly"
       ],
       "t1": [
         "0.6"
@@ -1434,8 +1434,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
   ],
   "sword": [
     {
-      "name": "木の剣",
-      "key": "木の剣",
+      "name": "Wooden Sword",
+      "key": "Wooden Sword",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1470,8 +1470,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Wooden Sword"
     },
     {
-      "name": "石の剣",
-      "key": "石の剣",
+      "name": "Stone Sword",
+      "key": "Stone Sword",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1506,8 +1506,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Stone Sword"
     },
     {
-      "name": "銅の剣",
-      "key": "銅の剣",
+      "name": "Copper Sword",
+      "key": "Copper Sword",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1542,8 +1542,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Copper Sword"
     },
     {
-      "name": "鉄の剣",
-      "key": "鉄の剣",
+      "name": "Steel Sword",
+      "key": "Steel Sword",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1578,8 +1578,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Steel Sword"
     },
     {
-      "name": "金の剣",
-      "key": "金の剣",
+      "name": "Gold Sword",
+      "key": "Gold Sword",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1614,8 +1614,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Gold Sword"
     },
     {
-      "name": "ルビーの剣",
-      "key": "ルビーの剣",
+      "name": "Ruby Sword",
+      "key": "Ruby Sword",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1650,8 +1650,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Ruby Sword"
     },
     {
-      "name": "ダイヤモンドの剣",
-      "key": "ダイヤモンドの剣",
+      "name": "Diamond Sword",
+      "key": "Diamond Sword",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1686,8 +1686,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Diamond Sword"
     },
     {
-      "name": "エメラルドの剣",
-      "key": "エメラルドの剣",
+      "name": "Emerald Sword",
+      "key": "Emerald Sword",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1722,17 +1722,17 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Emerald Sword"
     },
     {
-      "name": "チャロイトの剣",
-      "key": "チャロイトの剣",
+      "name": "Charoite Sword",
+      "key": "Charoite Sword",
       "groupBadges": [
         {
-          "key": "切断",
-          "text": "切断",
-          "displayName": "切断"
+          "key": "Snappy",
+          "text": "Snappy",
+          "displayName": "Snappy"
         }
       ],
       "groupRaw": [
-        "切断"
+        "Snappy"
       ],
       "t1": [
         "—"
@@ -1768,13 +1768,13 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "key": "dragonhide sword",
       "groupBadges": [
         {
-          "key": "切断",
-          "text": "切断",
-          "displayName": "切断"
+          "key": "Snappy",
+          "text": "Snappy",
+          "displayName": "Snappy"
         }
       ],
       "groupRaw": [
-        "切断"
+        "Snappy"
       ],
       "t1": [
         "0.8"
@@ -1810,13 +1810,13 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "key": "fire/ice_draconic_steel sword",
       "groupBadges": [
         {
-          "key": "切断",
-          "text": "切断",
-          "displayName": "切断"
+          "key": "Snappy",
+          "text": "Snappy",
+          "displayName": "Snappy"
         }
       ],
       "groupRaw": [
-        "切断"
+        "Snappy"
       ],
       "t1": [
         "0.2"
@@ -1850,8 +1850,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
   ],
   "other": [
     {
-      "name": "魔法の棒",
-      "key": "魔法の棒",
+      "name": "Magical Stick",
+      "key": "Magical Stick",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1886,8 +1886,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Magical Stick"
     },
     {
-      "name": "グラップリングフック",
-      "key": "グラップリングフック",
+      "name": "Grappling Hook",
+      "key": "Grappling Hook",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1922,8 +1922,8 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
       "displayName": "Grappling Hook"
     },
     {
-      "name": "ハンマー",
-      "key": "ハンマー",
+      "name": "Hammer",
+      "key": "Hammer",
       "groupBadges": [],
       "groupRaw": [
         "—"
@@ -1961,61 +1961,61 @@ export const TOOL_TABLES_DATA: Record<string, ToolStatRow[]> = {
 };
 
 export const TOOL_NAME_EN_MAP: Record<string, string> = {
-  "木の斧": "Wooden Axe",
-  "石の斧": "Stone Axe",
-  "銅の斧": "Copper Axe",
-  "鉄の斧": "Steel Axe",
-  "金の斧": "Gold Axe",
-  "ルビーの斧": "Ruby Axe",
-  "ダイヤモンドの斧": "Diamond Axe",
-  "エメラルドの斧": "Emerald Axe",
-  "チャロイトの斧": "Charoite Axe",
+  "Wooden Axe": "Wooden Axe",
+  "Stone Axe": "Stone Axe",
+  "Copper Axe": "Copper Axe",
+  "Steel Axe": "Steel Axe",
+  "Gold Axe": "Gold Axe",
+  "Ruby Axe": "Ruby Axe",
+  "Diamond Axe": "Diamond Axe",
+  "Emerald Axe": "Emerald Axe",
+  "Charoite Axe": "Charoite Axe",
   "dragonhide axe": "Dragonhide Axe",
   "fire/ice_draconic_steel axe": "Fire/Ice Draconic Steel Axe",
-  "木のつるはし": "Wooden Pickaxe",
-  "石のつるはし": "Stone Pickaxe",
-  "銅のつるはし": "Copper Pickaxe",
-  "鉄のつるはし": "Steel Pickaxe",
-  "金のつるはし": "Gold Pickaxe",
-  "ルビーのつるはし": "Ruby Pickaxe",
-  "ダイヤモンドのつるはし": "Diamond Pickaxe",
-  "エメラルドのつるはし": "Emerald Pickaxe",
-  "チャロイトのつるはし": "Charoite Pickaxe",
+  "Wooden Pickaxe": "Wooden Pickaxe",
+  "Stone Pickaxe": "Stone Pickaxe",
+  "Copper Pickaxe": "Copper Pickaxe",
+  "Steel Pickaxe": "Steel Pickaxe",
+  "Gold Pickaxe": "Gold Pickaxe",
+  "Ruby Pickaxe": "Ruby Pickaxe",
+  "Diamond Pickaxe": "Diamond Pickaxe",
+  "Emerald Pickaxe": "Emerald Pickaxe",
+  "Charoite Pickaxe": "Charoite Pickaxe",
   "dragonhide pick": "Dragonhide Pickaxe",
   "fire/ice_draconic_steel pick": "Fire/Ice Draconic Steel Pickaxe",
-  "木のシャベル": "Wooden Shovel",
-  "石のシャベル": "Stone Shovel",
-  "銅のシャベル": "Copper Shovel",
-  "鉄のシャベル": "Steel Shovel",
-  "金のシャベル": "Gold Shovel",
-  "ルビーのシャベル": "Ruby Shovel",
-  "ダイヤモンドのシャベル": "Diamond Shovel",
-  "エメラルドのシャベル": "Emerald Shovel",
-  "チャロイトのシャベル": "Charoite Shovel",
+  "Wooden Shovel": "Wooden Shovel",
+  "Stone Shovel": "Stone Shovel",
+  "Copper Shovel": "Copper Shovel",
+  "Steel Shovel": "Steel Shovel",
+  "Gold Shovel": "Gold Shovel",
+  "Ruby Shovel": "Ruby Shovel",
+  "Diamond Shovel": "Diamond Shovel",
+  "Emerald Shovel": "Emerald Shovel",
+  "Charoite Shovel": "Charoite Shovel",
   "dragonhide shovel": "Dragonhide Shovel",
   "fire/ice_draconic_steel shovel": "Fire/Ice Draconic Steel Shovel",
-  "木の剣": "Wooden Sword",
-  "石の剣": "Stone Sword",
-  "銅の剣": "Copper Sword",
-  "鉄の剣": "Steel Sword",
-  "金の剣": "Gold Sword",
-  "ルビーの剣": "Ruby Sword",
-  "ダイヤモンドの剣": "Diamond Sword",
-  "エメラルドの剣": "Emerald Sword",
-  "チャロイトの剣": "Charoite Sword",
+  "Wooden Sword": "Wooden Sword",
+  "Stone Sword": "Stone Sword",
+  "Copper Sword": "Copper Sword",
+  "Steel Sword": "Steel Sword",
+  "Gold Sword": "Gold Sword",
+  "Ruby Sword": "Ruby Sword",
+  "Diamond Sword": "Diamond Sword",
+  "Emerald Sword": "Emerald Sword",
+  "Charoite Sword": "Charoite Sword",
   "dragonhide sword": "Dragonhide Sword",
   "fire/ice_draconic_steel sword": "Fire/Ice Draconic Steel Sword",
-  "魔法の棒": "Magical Stick",
-  "グラップリングフック": "Grappling Hook",
-  "ハンマー": "Hammer"
+  "Magical Stick": "Magical Stick",
+  "Grappling Hook": "Grappling Hook",
+  "Hammer": "Hammer"
 };
 
 export const TOOL_CATEGORY_MAP: Record<string, 'axe' | 'pickaxe' | 'shovel' | 'sword' | 'other'> = {
-  '木の斧': 'axe', '石の斧': 'axe', '銅の斧': 'axe', '鉄の斧': 'axe', '金の斧': 'axe', 'ルビーの斧': 'axe', 'ダイヤモンドの斧': 'axe', 'エメラルドの斧': 'axe', 'チャロイトの斧': 'axe', 'dragonhide axe': 'axe', 'fire/ice_draconic_steel axe': 'axe',
-  '木のつるはし': 'pickaxe', '石のつるはし': 'pickaxe', '銅のつるはし': 'pickaxe', '鉄のつるはし': 'pickaxe', '金のつるはし': 'pickaxe', 'ルビーのつるはし': 'pickaxe', 'ダイヤモンドのつるはし': 'pickaxe', 'エメラルドのつるはし': 'pickaxe', 'チャロイトのつるはし': 'pickaxe', 'dragonhide pick': 'pickaxe', 'fire/ice_draconic_steel pick': 'pickaxe',
-  '木のシャベル': 'shovel', '石のシャベル': 'shovel', '銅のシャベル': 'shovel', '鉄のシャベル': 'shovel', '金のシャベル': 'shovel', 'ルビーのシャベル': 'shovel', 'ダイヤモンドのシャベル': 'shovel', 'エメラルドのシャベル': 'shovel', 'チャロイトのシャベル': 'shovel', 'dragonhide shovel': 'shovel', 'fire/ice_draconic_steel shovel': 'shovel',
-  '木の剣': 'sword', '石の剣': 'sword', '銅の剣': 'sword', '鉄の剣': 'sword', '金の剣': 'sword', 'ルビーの剣': 'sword', 'ダイヤモンドの剣': 'sword', 'エメラルドの剣': 'sword', 'チャロイトの剣': 'sword', 'dragonhide sword': 'sword', 'fire/ice_draconic_steel sword': 'sword',
-  '魔法の棒': 'other', 'グラップリングフック': 'other', 'ハンマー': 'other'
+  'Wooden Axe': 'axe', 'Stone Axe': 'axe', 'Copper Axe': 'axe', 'Steel Axe': 'axe', 'Gold Axe': 'axe', 'Ruby Axe': 'axe', 'Diamond Axe': 'axe', 'Emerald Axe': 'axe', 'Charoite Axe': 'axe', 'dragonhide axe': 'axe', 'fire/ice_draconic_steel axe': 'axe',
+  'Wooden Pickaxe': 'pickaxe', 'Stone Pickaxe': 'pickaxe', 'Copper Pickaxe': 'pickaxe', 'Steel Pickaxe': 'pickaxe', 'Gold Pickaxe': 'pickaxe', 'Ruby Pickaxe': 'pickaxe', 'Diamond Pickaxe': 'pickaxe', 'Emerald Pickaxe': 'pickaxe', 'Charoite Pickaxe': 'pickaxe', 'dragonhide pick': 'pickaxe', 'fire/ice_draconic_steel pick': 'pickaxe',
+  'Wooden Shovel': 'shovel', 'Stone Shovel': 'shovel', 'Copper Shovel': 'shovel', 'Steel Shovel': 'shovel', 'Gold Shovel': 'shovel', 'Ruby Shovel': 'shovel', 'Diamond Shovel': 'shovel', 'Emerald Shovel': 'shovel', 'Charoite Shovel': 'shovel', 'dragonhide shovel': 'shovel', 'fire/ice_draconic_steel shovel': 'shovel',
+  'Wooden Sword': 'sword', 'Stone Sword': 'sword', 'Copper Sword': 'sword', 'Steel Sword': 'sword', 'Gold Sword': 'sword', 'Ruby Sword': 'sword', 'Diamond Sword': 'sword', 'Emerald Sword': 'sword', 'Charoite Sword': 'sword', 'dragonhide sword': 'sword', 'fire/ice_draconic_steel sword': 'sword',
+  'Magical Stick': 'other', 'Grappling Hook': 'other', 'Hammer': 'other'
 };
 
 export const BASE_TOOL_CAPS_DICT: ToolCapabilities = {
@@ -2032,7 +2032,7 @@ export const BASE_TOOL_CAPS_DICT: ToolCapabilities = {
         };
 
 export const TOOL_DEFAULT_USES: Record<string, number> = {
-            // ---ツール---
+            // --- Tools ---
             "admin_equipment:super_tool": 0,
             "compass:4": 0,
             "default:axe_copper": 0,
@@ -2117,7 +2117,7 @@ export const TOOL_DEFAULT_USES: Record<string, number> = {
             "workbench:hammer": 0,
             "worldedit:brush": 0,
             "worldedit:wand": 0,
-            // ---鎧---
+            // --- Armor ---
             "3d_armor_stand:armor_stand": 0,
             "3d_armor_stand:armor_stand_birch_wood": 0,
             "3d_armor_stand:armor_stand_jungle_wood": 0,

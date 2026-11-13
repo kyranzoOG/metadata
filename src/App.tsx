@@ -34,6 +34,7 @@ import { ToolStatsSection } from './components/ToolStatsSection';
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { Credits } from './components/Credits';
 import { SpecialText } from './components/SpecialText';
+import { InteractiveBackground } from './components/InteractiveBackground';
 import { searchItems, getItemDisplayName, ItemEntry } from './utils/itemSearch';
 import {
   ItemGeneratorState,
@@ -247,7 +248,7 @@ function MetadataGeneratorApp() {
   const hasCustomItems = Object.values(state.customItemsData || {}).some((v) => v !== '' && v !== null);
 
   return (
-    <div className="min-h-screen bg-[#050705] text-white flex flex-col font-sans selection:bg-[#bef264]/30 selection:text-[#bef264]">
+    <div className="min-h-screen bg-transparent relative z-10 text-white flex flex-col font-sans selection:bg-[#bef264]/30 selection:text-[#bef264]">
       {/* Top Header */}
       <Header
         toolRanksEnabled={state.toolRanksEnabled}
@@ -265,7 +266,7 @@ function MetadataGeneratorApp() {
       {/* Main Container */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
         {/* SECTION 1: Basic Item Configuration (matching screenshot) */}
-        <section className="bg-[#080d08] border border-[#1b2b1b] rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-xl relative z-30">
+        <section className="bg-[#080d08]/68 border border-[#bef264]/15 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md relative z-30">
           <div className="flex items-center gap-2 mb-4">
             <span className="p-1.5 rounded-lg bg-[#bef264]/10 text-[#bef264] border border-[#bef264]/20">
               <Layers className="w-4 h-4" />
@@ -437,10 +438,10 @@ function MetadataGeneratorApp() {
                 <button
                   type="button"
                   onClick={() => setState((prev) => ({ ...prev, toolRanksEnabled: !prev.toolRanksEnabled }))}
-                  className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex items-center justify-between group ${
+                  className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex items-center justify-between group backdrop-blur-sm ${
                     state.toolRanksEnabled
-                      ? 'bg-[#121c12] border-[#bef264]/40 hover:border-[#bef264] shadow-sm'
-                      : 'bg-[#000000] border-[#182618] hover:border-[#2a3e2a]'
+                      ? 'bg-[#121f12]/70 border-[#bef264]/45 hover:border-[#bef264] shadow-sm'
+                      : 'bg-[#050905]/55 border-[#1b2b1b]/80 hover:border-[#2a3e2a] hover:bg-[#0b130b]/65'
                   }`}
                   title="Automatically calculate and append Tool Ranks (Level & Uses) for tools"
                 >
@@ -463,10 +464,10 @@ function MetadataGeneratorApp() {
                 <button
                   type="button"
                   onClick={() => setHintsVisible(!hintsVisible)}
-                  className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex items-center justify-between group ${
+                  className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex items-center justify-between group backdrop-blur-sm ${
                     hintsVisible
-                      ? 'bg-[#121c12] border-[#bef264]/40 hover:border-[#bef264] shadow-sm'
-                      : 'bg-[#000000] border-[#182618] hover:border-[#2a3e2a]'
+                      ? 'bg-[#121f12]/70 border-[#bef264]/45 hover:border-[#bef264] shadow-sm'
+                      : 'bg-[#050905]/55 border-[#1b2b1b]/80 hover:border-[#2a3e2a] hover:bg-[#0b130b]/65'
                   }`}
                   title="Toggle guidance hints below input fields"
                 >
@@ -483,7 +484,7 @@ function MetadataGeneratorApp() {
                 <button
                   type="button"
                   onClick={() => setSavedModalOpen(true)}
-                  className="p-3 rounded-xl border bg-[#000000] border-[#182618] hover:border-[#bef264]/40 hover:bg-[#0c140c] text-left transition-all cursor-pointer flex items-center justify-between group"
+                  className="p-3 rounded-xl border bg-[#050905]/55 border-[#1b2b1b]/80 hover:border-[#bef264]/45 hover:bg-[#0c160c]/68 backdrop-blur-sm text-left transition-all cursor-pointer flex items-center justify-between group"
                   title="Open library of saved commands"
                 >
                   <div>
@@ -501,7 +502,7 @@ function MetadataGeneratorApp() {
                 <button
                   type="button"
                   onClick={handleResetAll}
-                  className="p-3 rounded-xl border bg-[#000000] border-[#182618] hover:border-rose-900/60 hover:bg-[#160c0c] text-left transition-all cursor-pointer flex items-center justify-between group"
+                  className="p-3 rounded-xl border bg-[#050905]/55 border-[#1b2b1b]/80 hover:border-rose-900/60 hover:bg-[#1a0d0d]/70 backdrop-blur-sm text-left transition-all cursor-pointer flex items-center justify-between group"
                   title="Reset all settings to default"
                 >
                   <div>
@@ -518,7 +519,7 @@ function MetadataGeneratorApp() {
         </section>
 
         {/* SECTION 2: Metadata Modules (rearranged exactly like screenshot 3x2 grid) */}
-        <section className="bg-[#080d08] border border-[#1b2b1b] rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-xl relative z-10">
+        <section className="bg-[#080d08]/62 border border-[#bef264]/15 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md relative z-10">
           <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
             <div className="flex items-center gap-2">
               <span className="p-1.5 rounded-lg bg-[#bef264]/10 text-[#bef264] border border-[#bef264]/20">
@@ -537,13 +538,13 @@ function MetadataGeneratorApp() {
             {/* Card 1: Tool Stats */}
             <div
               onClick={() => setToolCapsOpen(true)}
-              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group hover:border-[#bef264]/60 ${
+              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group backdrop-blur-md hover:border-[#bef264]/60 ${
                 hasCustomCaps
-                  ? 'bg-[#121c12] border-[#bef264]/40 shadow-lg shadow-[#bef264]/5'
-                  : 'bg-[#070a07] border-[#182418] hover:bg-[#0c120c]'
+                  ? 'bg-[#121f12]/65 border-[#bef264]/45 shadow-lg shadow-[#bef264]/10'
+                  : 'bg-[#080e08]/50 border-[#bef264]/15 hover:bg-[#0e190e]/65'
               }`}
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0f160f] border border-[#213021] flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-[#0f180f]/75 border border-[#233823]/80 flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
                 <Wrench className="w-5 h-5" />
               </div>
               <span className="text-xs font-bold text-white group-hover:text-[#bef264] transition-colors">
@@ -561,13 +562,13 @@ function MetadataGeneratorApp() {
             {/* Card 2: Description */}
             <div
               onClick={() => setDescOpen(true)}
-              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group hover:border-[#bef264]/60 ${
+              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group backdrop-blur-md hover:border-[#bef264]/60 ${
                 hasDescription
-                  ? 'bg-[#121c12] border-[#bef264]/40 shadow-lg shadow-[#bef264]/5'
-                  : 'bg-[#070a07] border-[#182418] hover:bg-[#0c120c]'
+                  ? 'bg-[#121f12]/65 border-[#bef264]/45 shadow-lg shadow-[#bef264]/10'
+                  : 'bg-[#080e08]/50 border-[#bef264]/15 hover:bg-[#0e190e]/65'
               }`}
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0f160f] border border-[#213021] flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-[#0f180f]/75 border border-[#233823]/80 flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
                 <FileText className="w-5 h-5" />
               </div>
               <span className="text-xs font-bold text-white group-hover:text-[#bef264] transition-colors">
@@ -585,13 +586,13 @@ function MetadataGeneratorApp() {
             {/* Card 3: Short Desc */}
             <div
               onClick={() => setShortDescOpen(true)}
-              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group hover:border-[#bef264]/60 ${
+              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group backdrop-blur-md hover:border-[#bef264]/60 ${
                 hasShortDesc
-                  ? 'bg-[#121c12] border-[#bef264]/40 shadow-lg shadow-[#bef264]/5'
-                  : 'bg-[#070a07] border-[#182418] hover:bg-[#0c120c]'
+                  ? 'bg-[#121f12]/65 border-[#bef264]/45 shadow-lg shadow-[#bef264]/10'
+                  : 'bg-[#080e08]/50 border-[#bef264]/15 hover:bg-[#0e190e]/65'
               }`}
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0f160f] border border-[#213021] flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-[#0f180f]/75 border border-[#233823]/80 flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
                 <AlignLeft className="w-5 h-5" />
               </div>
               <span className="text-xs font-bold text-white group-hover:text-[#bef264] transition-colors">
@@ -609,13 +610,13 @@ function MetadataGeneratorApp() {
             {/* Card 4: Item Color */}
             <div
               onClick={() => setItemColorOpen(true)}
-              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group hover:border-[#bef264]/60 ${
+              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group backdrop-blur-md hover:border-[#bef264]/60 ${
                 hasColor
-                  ? 'bg-[#121c12] border-[#bef264]/40 shadow-lg shadow-[#bef264]/5'
-                  : 'bg-[#070a07] border-[#182418] hover:bg-[#0c120c]'
+                  ? 'bg-[#121f12]/65 border-[#bef264]/45 shadow-lg shadow-[#bef264]/10'
+                  : 'bg-[#080e08]/50 border-[#bef264]/15 hover:bg-[#0e190e]/65'
               }`}
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0f160f] border border-[#213021] flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-[#0f180f]/75 border border-[#233823]/80 flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
                 {hasColor ? (
                   <span
                     className="w-5 h-5 rounded-full border border-white/30 shadow-sm"
@@ -640,13 +641,13 @@ function MetadataGeneratorApp() {
             {/* Card 5: Enchantments */}
             <div
               onClick={() => setEnchantOpen(true)}
-              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group hover:border-[#bef264]/60 ${
+              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group backdrop-blur-md hover:border-[#bef264]/60 ${
                 enchantCount > 0
-                  ? 'bg-[#121c12] border-[#bef264]/40 shadow-lg shadow-[#bef264]/5'
-                  : 'bg-[#070a07] border-[#182418] hover:bg-[#0c120c]'
+                  ? 'bg-[#121f12]/65 border-[#bef264]/45 shadow-lg shadow-[#bef264]/10'
+                  : 'bg-[#080e08]/50 border-[#bef264]/15 hover:bg-[#0e190e]/65'
               }`}
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0f160f] border border-[#213021] flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-[#0f180f]/75 border border-[#233823]/80 flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
                 <Sparkles className="w-5 h-5" />
               </div>
               <span className="text-xs font-bold text-white group-hover:text-[#bef264] transition-colors">
@@ -654,7 +655,7 @@ function MetadataGeneratorApp() {
               </span>
               <div className="mt-0.5">
                 {enchantCount > 0 ? (
-                  <span className="px-2 py-0.2 rounded-full text-[10px] font-semibold bg-[#1c2e1c] text-[#bef264] border border-[#2d472d]">
+                  <span className="px-2 py-0.2 rounded-full text-[10px] font-semibold bg-[#1c2e1c]/80 text-[#bef264] border border-[#2d472d]">
                     {enchantCount} Active
                   </span>
                 ) : (
@@ -666,13 +667,13 @@ function MetadataGeneratorApp() {
             {/* Card 6: Custom Items */}
             <div
               onClick={() => setCustomItemsOpen(true)}
-              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group hover:border-[#bef264]/60 ${
+              className={`p-4 rounded-xl border flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-200 group backdrop-blur-md hover:border-[#bef264]/60 ${
                 hasCustomItems
-                  ? 'bg-[#121c12] border-[#bef264]/40 shadow-lg shadow-[#bef264]/5'
-                  : 'bg-[#070a07] border-[#182418] hover:bg-[#0c120c]'
+                  ? 'bg-[#121f12]/65 border-[#bef264]/45 shadow-lg shadow-[#bef264]/10'
+                  : 'bg-[#080e08]/50 border-[#bef264]/15 hover:bg-[#0e190e]/65'
               }`}
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0f160f] border border-[#213021] flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-[#0f180f]/75 border border-[#233823]/80 flex items-center justify-center mb-2.5 text-[#8ea38e] group-hover:text-[#bef264] group-hover:border-[#bef264]/40 transition-colors">
                 <Sliders className="w-5 h-5" />
               </div>
               <span className="text-xs font-bold text-white group-hover:text-[#bef264] transition-colors">
@@ -862,6 +863,7 @@ export default function App() {
 
   return (
     <BrowserRouter basename={basename}>
+      <InteractiveBackground />
       <HashRedirectHandler />
       <ToastProvider>
         <Routes>

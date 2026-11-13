@@ -332,7 +332,7 @@ export const TextEditorModal: React.FC<TextEditorModalProps> = ({
                         style={{ backgroundColor: swatch.hex }}
                       >
                         {activeColor.toUpperCase() === swatch.hex.toUpperCase() && (
-                          <span className="text-black">✓</span>
+                          <Check className="w-2.5 h-2.5 text-black stroke-[3]" />
                         )}
                       </span>
                       <span className="text-[11px] font-medium text-white truncate">{swatch.name}</span>

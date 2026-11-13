@@ -29,7 +29,7 @@ export const TooltipPreview: React.FC<TooltipPreviewProps> = ({
   const hasContent = itemName || generatedDescription;
 
   return (
-    <div className="bg-[#080d08] border border-[#1b2b1b] rounded-2xl p-5 shadow-2xl backdrop-blur-xl flex flex-col h-full">
+    <div className="bg-[#080d08]/68 border border-[#bef264]/15 rounded-2xl p-5 shadow-2xl backdrop-blur-md flex flex-col h-full">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <Eye className="w-4 h-4 text-[#bef264]" />
@@ -42,7 +42,7 @@ export const TooltipPreview: React.FC<TooltipPreviewProps> = ({
       </div>
 
       {/* Tooltip Display Area */}
-      <div className="flex-1 min-h-[140px] flex items-center justify-center p-3 rounded-xl bg-[#000000] border border-[#142214]">
+      <div className="flex-1 min-h-[140px] flex items-center justify-center p-3 rounded-xl bg-[#020402]/75 border border-[#142214]/90">
         {hasContent ? (
           <div
             style={customBgStyle}

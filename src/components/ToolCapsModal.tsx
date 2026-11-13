@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Wrench, RotateCcw, Check, Sparkles } from 'lucide-react';
+import { X, Wrench, RotateCcw, Check, Sparkles, Swords, Pickaxe, Axe, Shovel, Leaf, Settings } from 'lucide-react';
 import { ToolCapabilities, TOOL_TABLES_DATA, DEFAULT_TOOL_CAPS_DICT, BASE_TOOL_CAPS_DICT } from '../data/toolStats';
 
 interface ToolCapsModalProps {
@@ -242,26 +242,30 @@ export const ToolCapsModal: React.FC<ToolCapsModalProps> = ({
           <div className="flex items-center gap-1 border-b border-[#1b271b] pb-2 overflow-x-auto text-xs">
             {(
               [
-                { id: 'weapon', label: '⚔️ Weapon / Combat' },
-                { id: 'cracky', label: '⛏️ Cracky (Mining)' },
-                { id: 'choppy', label: '🪓 Choppy (Wood)' },
-                { id: 'crumbly', label: '🪵 Crumbly (Digging)' },
-                { id: 'snappy', label: '🌿 Snappy (Shearing)' },
-                { id: 'drop_level', label: '⚙️ Other & Globals' },
+                { id: 'weapon', label: 'Weapon / Combat', Icon: Swords },
+                { id: 'cracky', label: 'Cracky (Mining)', Icon: Pickaxe },
+                { id: 'choppy', label: 'Choppy (Wood)', Icon: Axe },
+                { id: 'crumbly', label: 'Crumbly (Digging)', Icon: Shovel },
+                { id: 'snappy', label: 'Snappy (Shearing)', Icon: Leaf },
+                { id: 'drop_level', label: 'Other & Globals', Icon: Settings },
               ] as const
-            ).map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-3 py-1.5 rounded-lg font-medium whitespace-nowrap transition-all cursor-pointer ${
-                  activeTab === tab.id
-                    ? 'bg-[#bef264] text-black shadow-sm font-semibold'
-                    : 'text-[#8ea38e] hover:text-white hover:bg-[#131d13]'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+            ).map((tab) => {
+              const TabIcon = tab.Icon;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium whitespace-nowrap transition-all cursor-pointer ${
+                    activeTab === tab.id
+                      ? 'bg-[#bef264] text-black shadow-sm font-semibold'
+                      : 'text-[#8ea38e] hover:text-white hover:bg-[#131d13]'
+                  }`}
+                >
+                  <TabIcon className="w-3.5 h-3.5 shrink-0" />
+                  <span>{tab.label}</span>
+                </button>
+              );
+            })}
           </div>
 
           {/* Tab Content Panels */}

@@ -67,7 +67,7 @@ export const CommandBar: React.FC<CommandBarProps> = ({
   const charCount = command.length;
 
   return (
-    <div className="bg-[#080d08] border border-[#1b2b1b] rounded-2xl p-5 shadow-2xl backdrop-blur-xl">
+    <div className="bg-[#080d08]/68 border border-[#bef264]/15 rounded-2xl p-5 shadow-2xl backdrop-blur-md">
       {/* Top Header */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
         <div className="flex items-center gap-2">
@@ -151,9 +151,9 @@ export const CommandBar: React.FC<CommandBarProps> = ({
       </p>
 
       {/* Terminal Display Container */}
-      <div className="rounded-xl overflow-hidden border border-[#1b2b1b] bg-[#000000] shadow-inner">
+      <div className="rounded-xl overflow-hidden border border-[#1b2b1b]/90 bg-[#020402]/80 shadow-inner">
         {/* Terminal Header */}
-        <div className="px-3.5 py-2 bg-[#040804] border-b border-[#142214] flex items-center justify-between text-xs font-mono text-[#8fa88f]">
+        <div className="px-3.5 py-2 bg-[#040804]/85 border-b border-[#142214] flex items-center justify-between text-xs font-mono text-[#8fa88f]">
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 rounded-full bg-[#bef264]/60 inline-block" />

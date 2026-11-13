@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
-import { Table, ChevronDown, ChevronUp, Search, Zap } from 'lucide-react';
-import { TOOL_TABLES_DATA, ToolStatRow, ToolCapabilities, DEFAULT_TOOL_CAPS_DICT, BASE_TOOL_CAPS_DICT } from '../data/toolStats';
+import {
+  Table,
+  ChevronDown,
+  ChevronUp,
+  Search,
+  Zap,
+  Pickaxe,
+  Axe,
+  Shovel,
+  Sword,
+  Wand2,
+} from 'lucide-react';
+import { TOOL_TABLES_DATA, ToolStatRow, ToolCapabilities, DEFAULT_TOOL_CAPS_DICT } from '../data/toolStats';
 import { useToast } from './Toast';
 import { SpecialText } from './SpecialText';
 
@@ -10,13 +21,48 @@ interface ToolStatsSectionProps {
 
 type TabKey = 'pick' | 'axe' | 'shovel' | 'sword' | 'other';
 
-const TAB_CONFIG: { key: TabKey; label: string; icon: string }[] = [
-  { key: 'pick', label: 'Pickaxes', icon: '⛏️' },
-  { key: 'axe', label: 'Axes', icon: '🪓' },
-  { key: 'shovel', label: 'Shovels', icon: '🪵' },
-  { key: 'sword', label: 'Swords', icon: '⚔️' },
-  { key: 'other', label: 'Other Tools', icon: '🪄' },
+const TAB_CONFIG: { key: TabKey; label: string; Icon: React.FC<{ className?: string }> }[] = [
+  { key: 'pick', label: 'Pickaxes', Icon: Pickaxe },
+  { key: 'axe', label: 'Axes', Icon: Axe },
+  { key: 'shovel', label: 'Shovels', Icon: Shovel },
+  { key: 'sword', label: 'Swords', Icon: Sword },
+  { key: 'other', label: 'Other Tools', Icon: Wand2 },
 ];
+
+const DEFAULT_TOOL_ID_BY_NAME: Record<string, string> = {
+  'Wooden Pickaxe': 'default:pick_wood',
+  'Stone Pickaxe': 'default:pick_stone',
+  'Copper Pickaxe': 'default:pick_copper',
+  'Steel Pickaxe': 'default:pick_steel',
+  'Gold Pickaxe': 'default:pick_gold',
+  'Ruby Pickaxe': 'default:pick_ruby',
+  'Diamond Pickaxe': 'default:pick_diamond',
+  'Emerald Pickaxe': 'default:pick_emerald',
+  'Wooden Axe': 'default:axe_wood',
+  'Stone Axe': 'default:axe_stone',
+  'Copper Axe': 'default:axe_copper',
+  'Steel Axe': 'default:axe_steel',
+  'Gold Axe': 'default:axe_gold',
+  'Ruby Axe': 'default:axe_ruby',
+  'Diamond Axe': 'default:axe_diamond',
+  'Emerald Axe': 'default:axe_emerald',
+  'Wooden Shovel': 'default:shovel_wood',
+  'Stone Shovel': 'default:shovel_stone',
+  'Copper Shovel': 'default:shovel_copper',
+  'Steel Shovel': 'default:shovel_steel',
+  'Gold Shovel': 'default:shovel_gold',
+  'Ruby Shovel': 'default:shovel_ruby',
+  'Diamond Shovel': 'default:shovel_diamond',
+  'Emerald Shovel': 'default:shovel_emerald',
+  'Wooden Sword': 'default:sword_wood',
+  'Stone Sword': 'default:sword_stone',
+  'Copper Sword': 'default:sword_copper',
+  'Steel Sword': 'default:sword_steel',
+  'Gold Sword': 'default:sword_gold',
+  'Ruby Sword': 'default:sword_ruby',
+  'Diamond Sword': 'default:sword_diamond',
+  'Emerald Sword': 'default:sword_emerald',
+};
 
 export const ToolStatsSection: React.FC<ToolStatsSectionProps> = ({ onApplyToolPreset }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -36,7 +82,8 @@ export const ToolStatsSection: React.FC<ToolStatsSectionProps> = ({ onApplyToolP
   });
 
   const handleApplyRow = (row: ToolStatRow) => {
-    let caps = DEFAULT_TOOL_CAPS_DICT[row.key] || BASE_TOOL_CAPS_DICT;
+    const defaultId = DEFAULT_TOOL_ID_BY_NAME[row.displayName] || row.key;
+    let caps: ToolCapabilities | undefined = DEFAULT_TOOL_CAPS_DICT[defaultId];
     if (!caps) {
       const parseVal = (arr: string[]) => (arr && arr[0] && arr[0] !== '—' ? parseFloat(arr[0]) : null);
       const parseIntVal = (arr: string[]) => (arr && arr[0] && arr[0] !== '—' ? parseInt(arr[0], 10) : null);
@@ -54,15 +101,11 @@ export const ToolStatsSection: React.FC<ToolStatsSectionProps> = ({ onApplyToolP
         Cracky: 'cracky',
         Crumbly: 'crumbly',
         Snappy: 'snappy',
-        伐採: 'choppy',
-        採掘: 'cracky',
-        掘削: 'crumbly',
-        草刈: 'snappy',
       };
 
       row.groupBadges.forEach((badge) => {
         const gKey = groupMap[badge.displayName] || groupMap[badge.key] || groupMap[badge.text];
-        if (gKey && caps.groupcaps) {
+        if (gKey && caps?.groupcaps) {
           const t1 = parseVal(row.t1);
           const t2 = parseVal(row.t2);
           const t3 = parseVal(row.t3);
@@ -80,11 +123,11 @@ export const ToolStatsSection: React.FC<ToolStatsSectionProps> = ({ onApplyToolP
   };
 
   return (
-    <div className="bg-[#0b100b] border border-[#1b271b] rounded-2xl shadow-2xl backdrop-blur-xl overflow-hidden">
+    <div className="bg-[#080d08]/68 border border-[#bef264]/15 rounded-2xl shadow-2xl backdrop-blur-md overflow-hidden">
       {/* Accordion Toggle Header */}
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="px-5 py-4 flex items-center justify-between cursor-pointer hover:bg-[#101710] select-none transition-colors border-b border-[#182418]"
+        className="px-5 py-4 flex items-center justify-between cursor-pointer hover:bg-[#101810]/60 select-none transition-colors border-b border-[#1f331f]/70"
       >
         <div className="flex items-center gap-3">
           <div className="p-2 rounded-xl bg-[#bef264]/10 text-[#bef264] border border-[#bef264]/20">
@@ -94,7 +137,7 @@ export const ToolStatsSection: React.FC<ToolStatsSectionProps> = ({ onApplyToolP
             <h2 className="text-sm sm:text-base font-bold text-white tracking-tight">
               Tool Stats Reference &amp; Preset Table
             </h2>
-            <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-[#182618] text-[#bef264] border border-[#2b3d2b]">
+            <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-[#182618]/80 text-[#bef264] border border-[#2b3d2b]">
               Official MultiCraft Stats
             </span>
           </div>
@@ -119,6 +162,7 @@ export const ToolStatsSection: React.FC<ToolStatsSectionProps> = ({ onApplyToolP
             <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
               {TAB_CONFIG.map((t) => {
                 const count = (TOOL_TABLES_DATA[t.key] || []).length;
+                const IconComponent = t.Icon;
                 return (
                   <button
                     key={t.key}
@@ -127,10 +171,10 @@ export const ToolStatsSection: React.FC<ToolStatsSectionProps> = ({ onApplyToolP
                     className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                       activeTab === t.key
                         ? 'bg-[#bef264] text-black shadow-md font-bold'
-                        : 'bg-[#0f160f] text-[#8ea38e] hover:text-white hover:bg-[#182318] border border-[#213021]'
+                        : 'bg-[#0f160f]/75 text-[#8ea38e] hover:text-white hover:bg-[#182318]/80 border border-[#213021]'
                     }`}
                   >
-                    <span>{t.icon}</span>
+                    <IconComponent className="w-3.5 h-3.5 shrink-0" />
                     <span>{t.label}</span>
                     <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
                       activeTab === t.key ? 'bg-black/20 text-black' : 'bg-[#182618] text-[#bef264]'
@@ -150,16 +194,16 @@ export const ToolStatsSection: React.FC<ToolStatsSectionProps> = ({ onApplyToolP
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search tools in category..."
-                className="w-full pl-8 pr-3 py-1.5 bg-[#060906] border border-[#213021] rounded-xl text-xs text-white placeholder-[#546a54] focus:outline-none focus:ring-1 focus:ring-[#bef264]"
+                className="w-full pl-8 pr-3 py-1.5 bg-[#050805]/70 border border-[#213021] rounded-xl text-xs text-white placeholder-[#546a54] focus:outline-none focus:ring-1 focus:ring-[#bef264]"
               />
             </div>
           </div>
 
           {/* Table Container */}
-          <div className="overflow-x-auto rounded-xl border border-[#1b271b] bg-[#050805]">
+          <div className="overflow-x-auto rounded-xl border border-[#1b271b]/80 bg-[#050805]/55">
             <table className="w-full text-left text-xs border-collapse">
               <thead>
-                <tr className="border-b border-[#182418] bg-[#0a0f0a] text-[#8ea38e] text-[11px] font-semibold">
+                <tr className="border-b border-[#182418]/80 bg-[#0a0f0a]/75 text-[#8ea38e] text-[11px] font-semibold">
                   <th className="p-3 whitespace-nowrap">Tool Name</th>
                   <th className="p-3 whitespace-nowrap">Group</th>
                   <th className="p-3 text-center whitespace-nowrap">Time L1</th>

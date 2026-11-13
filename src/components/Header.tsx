@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = () => {
   const textSrc = `${baseUrl}assets/metadata_text.png`.replace(/([^:]\/)\/+/g, '$1');
 
   return (
-    <header className="border-b border-[#1b251b] bg-[#080b08]/95 backdrop-blur-md sticky top-0 z-40 shadow-lg shadow-black/40">
+    <header className="border-b border-[#bef264]/15 bg-[#060906]/72 backdrop-blur-md sticky top-0 z-40 shadow-lg shadow-black/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
         {/* Title & Branding */}
         <div className="flex items-center gap-6">
